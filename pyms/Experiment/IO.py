@@ -48,7 +48,7 @@ def load_expr(file_name):
     if not is_str(file_name):
         error("'file_name' not a string")
 
-    fp = open(file_name,'r')
+    fp = open(file_name,'rb')
     expr = cPickle.load(fp)
     fp.close()
 
@@ -80,7 +80,7 @@ def store_expr(file_name, expr):
     if not is_str(file_name):
         error("'file_name' not a string")
 
-    fp = open(file_name,'w')
+    fp = open(file_name,'wb')
     cPickle.dump(expr, fp, 1)
     fp.close()
 
