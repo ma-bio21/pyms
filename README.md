@@ -8,11 +8,11 @@ The upstream repository here on github from @ma-bio21 seems more up to date than
 most notably the implementation of using mpi4py in loading ANDI files. There are other differences though, 
 some bug fixes and added functionality. 
 
-Also a note: in the setup.py there is a requirement for the Pycluster library and it is used in the 
+A note: in the setup.py there is a requirement for the Pycluster library and it is used in the 
 files found in the ./Peak/List/DPA directory, but installing the library from pip failed on my machine 
 (Linux Mint 18 Sarah with python 2.7.12 installed).
 
-A diff of the two directories list the following files as different:
+A diff of the two directories (from git and from google code) list the following files as different:
 - ./Deconvolution/BillerBiemann/Function.py 
 - ./Display/Class.py 
 - ./Display/Class.pyc 
