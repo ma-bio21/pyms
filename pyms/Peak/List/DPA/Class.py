@@ -24,7 +24,11 @@ Classes for peak alignment by dynamic programming
 
 import copy
 
-import numpy, Pycluster
+import numpy
+try:
+    from Pycluster import treecluster
+except:
+    from Bio.Cluster import treecluster
 
 from pyms.Utils.Error import error, stop
 from pyms.Utils.IO import dump_object
@@ -741,7 +745,7 @@ class PairwiseAlignment(object):
         n = len(dist_matrix)
 
         print " -> Clustering %d pairwise alignments." % (n*(n-1)),
-        tree = Pycluster.treecluster(distancematrix=dist_matrix, method='a')
+        tree = treecluster(distancematrix=dist_matrix, method='a')
         print "Done"
 
         return tree
